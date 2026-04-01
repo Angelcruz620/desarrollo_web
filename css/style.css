@@ -1,0 +1,220 @@
+/* ================================
+   VARIABLES - Cambia estos colores
+   y todo el blog cambia junto
+================================ */
+:root {
+  --color-fondo: antiquewhite;
+  --color-blanco: #ffffff;
+  --color-texto: #1a1a1a;
+  --color-texto-suave: #1729cb;
+  --color-acento: #2563eb;    /* azul - cámbialo a tu gusto */
+  --color-borde: #e5e7eb;
+  --fuente: 'Georgia', serif;
+  --fuente-ui: system-ui, sans-serif;
+  --max-ancho: 720px;
+}
+
+/* ================================
+   RESET BÁSICO
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.7;
+  font-size: 18px;
+}
+
+a {
+  color: var(--color-acento);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ================================
+   CONTENEDOR CENTRAL
+================================ */
+.container {
+  max-width: var(--max-ancho);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ================================
+   HEADER Y NAVEGACIÓN
+================================ */
+header {
+  background-color: var(--color-blanco);
+  border-bottom: 1px solid var(--color-borde);
+  padding: 16px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--fuente-ui);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--color-texto);
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+  font-family: var(--fuente-ui);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+nav a {
+  color: var(--color-texto-suave);
+}
+
+nav a:hover {
+  color: var(--color-acento);
+  text-decoration: none;
+  font-weight: bold;
+  background-color: black;
+  border-radius: 5px;
+}
+
+/* ================================
+   CONTENIDO PRINCIPAL
+================================ */
+main {
+  padding: 48px 20px;
+}
+
+main h1 {
+  font-size: 28px;
+  margin-bottom: 32px;
+  font-family: var(--fuente-ui);
+}
+
+/* ================================
+   TARJETAS DE POST
+================================ */
+.post-card {
+  background: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  padding: 28px;
+  margin-bottom: 20px;
+}
+
+.post-card h2 {
+  font-size: 22px;
+  margin: 8px 0 12px;
+}
+
+.post-card h2 a {
+  color: var(--color-texto);
+}
+
+.post-card h2 a:hover {
+  color: var(--color-acento);
+  text-decoration: none;
+}
+
+.post-card p {
+  color: var(--color-texto-suave);
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.post-tag {
+  font-family: var(--fuente-ui);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: #dbeafe;
+  color: #1d4ed8;
+  padding: 3px 10px;
+  border-radius: 4px;
+}
+
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--fuente-ui);
+  font-size: 14px;
+  color: var(--color-texto-suave);
+  border-top: 1px solid var(--color-borde);
+  padding-top: 16px;
+  margin-top: 4px;
+}
+
+/* ================================
+   FOOTER
+================================ */
+footer {
+  border-top: 1px solid var(--color-borde);
+  padding: 32px 0;
+  text-align: center;
+  font-family: var(--fuente-ui);
+  font-size: 14px;
+  color: var(--color-texto-suave);
+}
+
+/* ================================
+   PÁGINA DE POST INDIVIDUAL
+================================ */
+.post-content {
+  max-width: 100%;
+}
+
+.post-header {
+  margin-bottom: 20px;
+  margin-top: 30px;
+  padding: 25px 30px;
+  border-bottom: 1px solid var(--color-borde);
+  background-color: white;
+}
+
+.post-header h1 {
+  font-size: 36px;
+  margin: 12px 0 8px;
+  line-height: 1.3;
+}
+
+.post-fecha {
+  font-family: var(--fuente-ui);
+  font-size: 14px;
+  color: var(--color-texto-suave);
+}
+
+.post-content h2 {
+  font-size: 24px;
+  margin: 36px 0 16px;
+}
+
+.post-content p {
+  margin-bottom: 20px;
+}
+
+.post-content pre {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 20px;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 24px 0;
+  font-family: var(--fuente-ui);
+  font-size: 15px;
+}

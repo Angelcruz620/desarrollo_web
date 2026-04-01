@@ -1,0 +1,208 @@
+/* ================================
+   PÁGINA ABOUT
+================================ */
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: beige;
+}
+
+nav a {
+  font-family: var(--fuente-ui);
+  font-size: 14px;
+  color: var(--color-texto);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.2s, color 0.2s;
+}
+nav a:hover {
+  background-color: black;
+  color: white;
+}
+.logo
+{
+    font-family: var(--fuente-ui);
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--color-acento);
+}
+
+.about {
+  padding-top: 8px;
+}
+
+.about-hero {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 40px 0 36px;
+  border-bottom: 1px solid var(--color-borde);
+  margin-bottom: 40px;
+}
+
+.avatar {
+  max-width: 150px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.about-hero h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.about-subtitulo {
+  font-size: 18px;
+  color: var(--color-texto-suave);
+  margin: 0;
+}
+.color 
+{
+    color: skyblue;
+    font-weight: bold;
+}
+
+.about-seccion {
+  margin-bottom: 48px;
+}
+
+.about-seccion h2 {
+  font-size: 22px;
+  margin-bottom: 16px;
+  font-family: var(--fuente-ui);
+}
+
+.about-seccion p {
+  margin-bottom: 14px;
+  color: var(--color-texto);
+}
+
+/* GRID DE TECNOLOGÍAS */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.tech-item {
+  background: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background-color: antiquewhite;
+}
+
+.tech-icono {
+  font-size: 28px;
+}
+
+.tech-nombre {
+  font-family: var(--fuente-ui);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.tech-desc {
+  font-family: var(--fuente-ui);
+  font-size: 14px;
+  color: var(--color-texto-suave);
+}
+
+.seccion 
+{
+    padding: 20px;
+    background-color: antiquewhite;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.seccion p
+{
+    font-size: 18px;
+    color: var(--color-texto);
+    text-align: left;
+}
+
+/* REDES SOCIALES */
+.redes {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fuente-ui);
+  font-weight: 600;
+  padding: 12px 16px;
+  border: 2px solid var(--color-acento);
+  border-radius: 6px;
+  color: var(--color-acento);
+  font-size: 24px;
+}
+
+.git 
+{
+  background-color: white;
+  color: black;
+  font-size: 30px;
+}
+
+.fa
+{
+    background-color: white;
+    color: blue;
+    font-size: 30px;
+}
+.tik
+{
+    color: black;
+    font-size: 30px;
+}
+.ig {
+    color: red;
+    font-size: 30px;
+}
+.git:hover {
+  transform: scale(1.5);
+}
+.fa:hover {
+  transform: scale(1.5);
+}
+.tik:hover {
+  transform: scale(1.5);
+}
+.ig:hover {
+  transform: scale(1.5);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: beige;
+  color: var(--color-texto-suave);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+/* RESPONSIVE - móvil */
+@media (max-width: 540px) {
+  .about-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+}
