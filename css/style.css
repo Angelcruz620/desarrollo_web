@@ -218,3 +218,144 @@ footer {
   font-family: var(--fuente-ui);
   font-size: 15px;
 }
+
+/* ================================
+   POST - ESTILOS ESPECÍFICOS
+================================ */
+.post-intro {
+  font-size: 20px;
+  color: var(--color-texto-suave);
+  margin-top: 16px;
+  line-height: 1.6;
+}
+
+.post-lista {
+  padding-left: 24px;
+  margin-bottom: 20px;
+}
+
+.post-lista li {
+  margin-bottom: 8px;
+  font-size: 17px;
+}
+
+code {
+  background: #f1f5f9;
+  color: #0f172a;
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-family: var(--fuente-ui);
+  font-size: 15px;
+}
+
+/* ================================
+   DIAGRAMA BOX MODEL
+================================ */
+.box-demo {
+  margin: 32px 0;
+  font-family: var(--fuente-ui);
+  font-size: 13px;
+}
+
+.box-margin {
+  background: #fef9c3;
+  border: 2px dashed #ca8a04;
+  padding: 20px;
+  position: relative;
+}
+
+.box-border {
+  background: #fee2e2;
+  border: 4px solid #dc2626;
+  padding: 20px;
+  position: relative;
+}
+
+.box-padding {
+  background: #dcfce7;
+  border: 2px dashed #16a34a;
+  padding: 20px;
+  position: relative;
+}
+
+.box-content {
+  background: #dbeafe;
+  border: 2px solid #2563eb;
+  padding: 20px;
+  text-align: center;
+  font-weight: 700;
+  color: #1d4ed8;
+  font-size: 15px;
+}
+
+.box-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-texto-suave);
+}
+
+/* ================================
+   TARJETAS TIP
+================================ */
+.tip-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.tip-card {
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 15px;
+}
+
+.tip-card h3 {
+  font-size: 17px;
+  margin-bottom: 10px;
+  font-family: var(--fuente-ui);
+}
+
+.tip-card p {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.tip-padding {
+  background: #dcfce7;
+  border: 1px solid #86efac;
+}
+
+.tip-padding h3 { color: #15803d; }
+
+.tip-margin {
+  background: #dbeafe;
+  border: 1px solid #93c5fd;
+}
+
+.tip-margin h3 { color: #1d4ed8; }
+
+/* BOTÓN VOLVER */
+.post-footer {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-borde);
+}
+
+.btn-volver {
+  font-family: var(--fuente-ui);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-acento);
+}
+
+/* RESPONSIVE */
+@media (max-width: 540px) {
+  .tip-grid {
+    grid-template-columns: 1fr;
+  }
+}

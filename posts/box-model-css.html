@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Box Model en CSS - Mi Blog Dev</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <a href="../index.html" class="logo">Mi Blog Dev</a>
+      <nav>
+        <a href="../index.html">Inicio</a>
+        <a href="../about.html">Sobre mí</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="post-content">
+
+      <div class="post-header">
+        <span class="post-tag">CSS</span>
+        <h1>Cómo funciona el modelo de caja (Box Model) en CSS</h1>
+        <p class="post-fecha">31 de marzo, 2026</p>
+        <p class="post-intro">
+          Cuando empecé a aprender CSS, los elementos nunca quedaban donde yo quería. 
+          Entender el Box Model fue lo que cambió todo. En este post te explico cómo 
+          funciona desde cero.
+        </p>
+      </div>
+
+      <h2>¿Qué es el Box Model?</h2>
+      <p>
+        En CSS, cada elemento HTML es tratado como una caja rectangular. No importa si 
+        es un título, un párrafo o un botón — todos son cajas. El Box Model describe 
+        las capas que forman esa caja:
+      </p>
+
+      <ul class="post-lista">
+        <li><strong>Content</strong> — el contenido real (texto, imagen, etc.)</li>
+        <li><strong>Padding</strong> — espacio entre el contenido y el borde</li>
+        <li><strong>Border</strong> — el borde que rodea el padding</li>
+        <li><strong>Margin</strong> — espacio entre este elemento y los demás</li>
+      </ul>
+
+      <p>Visualmente, las capas van de adentro hacia afuera así:</p>
+
+      <!-- DIAGRAMA VISUAL -->
+      <div class="box-demo">
+        <div class="box-margin">
+          <span class="box-label">Margin</span>
+          <div class="box-border">
+            <span class="box-label">Border</span>
+            <div class="box-padding">
+              <span class="box-label">Padding</span>
+              <div class="box-content">
+                Content
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Las 4 capas en código</h2>
+      <p>Así se escribe cada capa en CSS:</p>
+
+      <pre><code>.mi-caja {
+  /* 1. El tamaño del contenido */
+  width: 200px;
+  height: 100px;
+
+  /* 2. Espacio interno (padding) */
+  padding: 16px;
+
+  /* 3. El borde */
+  border: 2px solid #2563eb;
+
+  /* 4. Espacio externo (margin) */
+  margin: 24px;
+}</code></pre>
+
+      <h2>El problema más común al empezar</h2>
+      <p>
+        Imagina que defines una caja con <code>width: 200px</code> y le agregas 
+        <code>padding: 20px</code>. ¿Cuánto mide tu caja en total?
+      </p>
+      <p>
+        Por defecto en CSS, el padding se <strong>suma</strong> al ancho. Entonces 
+        tu caja mide en realidad <strong>240px</strong> (200 + 20 de cada lado). 
+        Esto confunde a todos al principio.
+      </p>
+
+      <pre><code>/* ❌ Sin box-sizing: la caja mide 240px de ancho */
+.caja {
+  width: 200px;
+  padding: 20px;
+}
+
+/* ✅ Con box-sizing: la caja mide exactamente 200px */
+.caja {
+  width: 200px;
+  padding: 20px;
+  box-sizing: border-box;
+}</code></pre>
+
+      <h2>La solución: box-sizing: border-box</h2>
+      <p>
+        Con <code>border-box</code> le dices al navegador que el <code>width</code> 
+        que defines incluye el padding y el border. El contenido se reduce para 
+        que todo quepa exactamente en el tamaño que pediste.
+      </p>
+      <p>
+        Es tan útil que la mayoría de desarrolladores lo aplican a todos los 
+        elementos del sitio desde el inicio, con este truco en el CSS:
+      </p>
+
+      <pre><code>/* Esto va al inicio de tu style.css */
+* {
+  box-sizing: border-box;
+}</code></pre>
+
+      <p>
+        De hecho, si mirás el <code>style.css</code> que construimos para este 
+        blog, esa línea ya está en el reset básico. 😉
+      </p>
+
+      <h2>Margin vs Padding — ¿cuándo usar cada uno?</h2>
+      <p>Una regla simple para no confundirte:</p>
+
+      <div class="tip-grid">
+        <div class="tip-card tip-padding">
+          <h3>Padding</h3>
+          <p>Espacio <strong>dentro</strong> del elemento. Afecta el fondo y el borde.</p>
+          <p>Úsalo cuando quieras que el contenido tenga aire adentro.</p>
+        </div>
+        <div class="tip-card tip-margin">
+          <h3>Margin</h3>
+          <p>Espacio <strong>fuera</strong> del elemento. Separa elementos entre sí.</p>
+          <p>Úsalo para separar un elemento de sus vecinos.</p>
+        </div>
+      </div>
+
+      <h2>Conclusión</h2>
+      <p>
+        El Box Model es uno de esos conceptos que una vez que entendés, todo en CSS 
+        empieza a tener sentido. Recordá siempre: content → padding → border → margin, 
+        de adentro hacia afuera.
+      </p>
+      <p>
+        Y agregá <code>box-sizing: border-box</code> al inicio de todo proyecto — 
+        te va a ahorrar muchos dolores de cabeza.
+      </p>
+
+      <div class="post-footer">
+        <a href="../index.html" class="btn-volver">← Ver todos los posts</a>
+      </div>
+
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Hecho con HTML, CSS y ganas de aprender.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
